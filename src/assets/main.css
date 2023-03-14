@@ -1,0 +1,65 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fancy-font: 'Bungee Shade', cursive;
+  --main-font: 'Roboto', sans-serif;
+  --bg-color: hsl(192, 53%, 88%);
+  --fg-color: hsl(0, 0%, 10%);
+  --white-color: hsl(0, 0%, 99%);
+  --accent-color: hsl(34, 40%, 70%);
+  --accent-light: hsl(34, 41%, 90%);
+  --accent-medium: hsl(34, 57%, 85%);
+  --b-radius: 0.3rem;
+} 
+
+*::selection {
+  background-color: var(--white-color);
+  color: var(--fg-color);
+}
+
+
+*:focus-visible {
+  outline-offset: 0.2rem;
+  outline-style: dotted;
+  outline-width: 2px;
+  outline-color: var(--fg-color);
+}
+
+html, body {
+  height: 100%;
+}
+
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--main-font);
+  color: var(--fg-color);
+}
+
+
+
+#app {
+  height: 100%;
+  width: 100%;
+  isolation: isolate;
+  position: relative;
+}
+
+
+img, a {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+a, button, input, textarea, select {
+  font-family: inherit;
+  font-size: 1rem;
+}
