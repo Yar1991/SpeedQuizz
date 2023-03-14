@@ -51,20 +51,6 @@ export const getItems = async () => {
       };
       allItems.push(item);
     }
-    // categories.forEach(async (category) => {
-    //   const imageRef = ref(imagesRef, `${category}.webp`);
-    //   const iconRef = ref(iconsRef, `${category}.svg`);
-    //   const [image, icon] = await Promise.all([
-    //     getDownloadURL(imageRef),
-    //     getDownloadURL(iconRef),
-    //   ]);
-    //   const item: ItemInterface = {
-    //     title: category,
-    //     icon,
-    //     image,
-    //   };
-    //   allItems.push(item);
-    // });
     return allItems;
   } catch (err: unknown) {
     console.log(err);
